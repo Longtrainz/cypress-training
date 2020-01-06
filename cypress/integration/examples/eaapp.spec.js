@@ -4,7 +4,7 @@
 describe("Test EA Application", () => {
 
     before("Login to application", () => {
-        cy.visit("http://eaapp.somee.com/");
+        cy.visit("/");
         cy.fixture('eauser').as('user');
     })
 
