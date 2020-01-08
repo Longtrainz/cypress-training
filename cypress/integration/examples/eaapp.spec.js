@@ -12,9 +12,9 @@ describe("Test EA Application", () => {
         cy.get("#loginLink").invoke('text').as('linkText');
 
         cy.get('@user').then((user) => {
-            cy.login(user.UserName, user.Password);
+            cy.login(Cypress.env("username"), user.Password);
         })
-
+        
         cy.get('@linkText').then(($x) => {
             expect($x).is.eql('Login');
         })
