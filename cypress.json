@@ -1,8 +1,8 @@
 {
-    
-    "video": true,
-    "baseUrl": "http://eaapp.somee.com",
-    "env": {
-        "username": "admin"
-    }
+  "video": true,
+  "baseUrl": "http://eaapp.somee.com",
+  "env": {
+    "username": "admin"
+  },
+  "projectId": "uz47en"
 }
