@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 
-
 describe("Test EA Application", () => {
 
     before("Login to application", () => {
@@ -29,7 +28,9 @@ describe("Test EA Application", () => {
             cy.wrap($row).click({ multiple: true })
         })
     
+        cy.percySnapshot();
         cy.get('.table').find('tr').contains('John').parent().contains('Benefits').click();
+        cy.percySnapshot();
     
         cy.wrap({ name: 'John' }).should('have.property', 'name').and('eq', 'John');
     })

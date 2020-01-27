@@ -2,24 +2,29 @@
 
 describe("Testing of EA App", () => {
     beforeEach("Call a particular it block", () => {
-        cy.visit("http://www.executeautomation.com/site/");
+        cy.visit("http://www.executeautomation.com/site/"); 
     })
 
     it("Testing EA site for assertion", () => {
+        cy.percySnapshot();
     // cy.get("[aria-label='jump to slide 2']", {timeout: 10000}).should('have.class', 'ls-nav-active');
-
-        cy.get("[aria-label='jump to slide 2']", {timeout: 10000}).should(($x) => {
-            expect($x).to.have.class('ls-nav-active');
-        });
-    });
-
-    it("Testing EA site for assertion with hooks", () => {
-        // cy.get("[aria-label='jump to slide 2']", {timeout: 10000}).should('have.class', 'ls-nav-active');
     
         cy.get("[aria-label='jump to slide 2']", {timeout: 10000}).should(($x) => {
             expect($x).to.have.class('ls-nav-active');
         });
+        cy.percySnapshot();
     });
+
+    // it("Testing EA site for assertion with hooks", () => {
+    //     cy.percySnapshot();
+    //     // cy.get("[aria-label='jump to slide 2']", {timeout: 10000}).should('have.class', 'ls-nav-active');
+    
+    //     cy.get("[aria-label='jump to slide 2']", {timeout: 10000}).should(($x) => {
+    //         expect($x).to.have.class('ls-nav-active');
+    //     });
+
+    //     cy.percySnapshot();
+    // });
     
     
     // xit("Login application", () => {

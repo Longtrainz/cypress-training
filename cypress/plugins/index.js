@@ -12,7 +12,14 @@
 // the project's config changing)
 
 // const cucumber = require('cypress-cucumber-preprocessor').default
+// module.exports = (on, config) => {
+//   // on('file:preprocessor', cucumber())
+// }
+
+// In cypress/plugins/index.js
+let percyHealthCheck = require('@percy/cypress/task')
+
 module.exports = (on, config) => {
-  // on('file:preprocessor', cucumber())
-}
+  on("task", percyHealthCheck);
+};
 
